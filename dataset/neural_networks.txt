@@ -1,0 +1,149 @@
+Source: Wikipedia - Artificial Neural Network
+URL: https://en.wikipedia.org/wiki/Neural_network_(machine_learning)
+
+Artificial Neural Networks
+
+An artificial neural network (ANN) is a computational model inspired by the structure and functioning of biological neural networks in the brain. ANNs are a subset of machine learning and form the backbone of deep learning algorithms.
+
+The first practical ANN was the perceptron, invented by Frank Rosenblatt in 1958. The modern deep learning renaissance began after 2012 when AlexNet demonstrated dramatic improvements in image recognition.
+
+Structure of Neural Networks
+
+Neurons and Layers
+
+A neural network is composed of layers of interconnected nodes or "neurons." Each connection can transmit a signal to other neurons. An artificial neuron receives signals, processes them, and can signal neurons connected to it.
+
+The typical structure includes:
+- Input layer: Receives raw feature data
+- Hidden layers: One or more intermediate layers that learn representations
+- Output layer: Produces the final prediction or output
+
+Each neuron in a layer is typically connected to every neuron in the following layer (fully connected or dense layer).
+
+Weights and Biases
+
+Each connection between neurons has an associated weight, which determines the strength of the connection. Each neuron also has a bias term. Learning in neural networks involves adjusting these weights and biases to minimize a loss function.
+
+The output of a neuron is calculated as:
+output = activation_function(sum(weights * inputs) + bias)
+
+Activation Functions
+
+Activation functions introduce non-linearity into the network, allowing it to learn complex patterns:
+
+1. Sigmoid: σ(x) = 1/(1+e^(-x))
+   - Output range: (0, 1)
+   - Used for binary classification output
+   - Suffers from vanishing gradient for deep networks
+
+2. Hyperbolic Tangent (tanh): tanh(x) = (e^x - e^(-x))/(e^x + e^(-x))
+   - Output range: (-1, 1)
+   - Zero-centered, better than sigmoid for hidden layers
+
+3. Rectified Linear Unit (ReLU): f(x) = max(0, x)
+   - Most popular activation for hidden layers
+   - Computationally efficient
+   - Can suffer from "dying ReLU" problem
+
+4. Leaky ReLU: f(x) = max(0.01x, x)
+   - Addresses dying ReLU problem
+
+5. Softmax: Converts logits to probability distribution
+   - Used for multi-class classification output layer
+
+Training Neural Networks
+
+Forward Propagation
+
+During forward propagation, input data flows through the network layer by layer. At each layer, the weighted sum of inputs is computed and passed through an activation function. The final output is compared to the target using a loss function.
+
+Loss Functions
+
+Loss functions measure how well the network's predictions match the true labels:
+- Mean Squared Error (MSE): Used for regression tasks
+- Binary Cross-Entropy: Used for binary classification
+- Categorical Cross-Entropy: Used for multi-class classification
+- Huber Loss: Robust to outliers
+
+Backpropagation
+
+Backpropagation is the key algorithm for training neural networks. It works by computing the gradient of the loss with respect to each weight using the chain rule of calculus, then updating weights in the direction that reduces loss.
+
+The algorithm:
+1. Perform forward pass to compute output and loss
+2. Compute gradient of loss at output
+3. Propagate gradients backward through the network
+4. Update weights using gradient descent
+
+Gradient Descent Variants
+
+- Batch Gradient Descent: Computes gradient on entire dataset
+- Stochastic Gradient Descent (SGD): Updates after each sample
+- Mini-batch Gradient Descent: Updates using small batches
+- Adam Optimizer: Adaptive learning rates with momentum
+- AdaGrad: Adapts learning rate per parameter
+- RMSprop: Maintains moving average of squared gradients
+
+Hyperparameters
+
+Key hyperparameters in neural network training:
+- Learning rate: Controls step size during optimization
+- Batch size: Number of training examples per update
+- Number of epochs: How many times the full dataset is passed
+- Network architecture: Number and size of layers
+- Regularization parameters: Dropout rate, weight decay
+
+Regularization Techniques
+
+Dropout
+
+Dropout is a regularization technique where randomly selected neurons are ignored during training. This prevents complex co-adaptations and forces the network to learn more robust features. Typical dropout rates are 0.2 to 0.5.
+
+Batch Normalization
+
+Batch normalization normalizes the inputs to each layer, reducing internal covariate shift. It allows higher learning rates, reduces sensitivity to initialization, and acts as a form of regularization.
+
+Early Stopping
+
+Early stopping monitors performance on a validation set during training and stops when validation performance begins to degrade, preventing overfitting.
+
+Types of Neural Networks
+
+Feedforward Networks (Multi-Layer Perceptrons)
+
+The simplest type of neural network where information moves only in one direction—forward—from input nodes, through hidden nodes to output nodes. There are no cycles or loops.
+
+Convolutional Neural Networks (CNNs)
+
+Specialized for processing grid-like data (images). Use convolutional layers with shared weights to detect local features. Key operations: convolution, pooling, and fully connected classification.
+
+Recurrent Neural Networks (RNNs)
+
+Designed for sequential data. Connections form directed cycles, allowing information to persist. Variants include LSTM (Long Short-Term Memory) and GRU (Gated Recurrent Unit).
+
+Transformer Networks
+
+Use self-attention mechanisms rather than recurrence. Highly parallelizable and effective for NLP tasks. The dominant architecture in modern large language models.
+
+Graph Neural Networks (GNNs)
+
+Operate on graph-structured data. Used for social network analysis, molecular property prediction, and knowledge graphs.
+
+Universal Approximation Theorem
+
+The universal approximation theorem states that a feedforward network with a single hidden layer containing a finite number of neurons can approximate continuous functions on compact subsets of R^n, under mild assumptions on the activation function.
+
+This theorem provides theoretical justification for why neural networks are powerful function approximators. However, it does not say anything about the learnability of these functions.
+
+Applications
+
+Neural networks are used in a wide variety of applications:
+- Image and video recognition
+- Natural language processing and translation
+- Speech recognition and synthesis
+- Medical diagnosis and drug discovery
+- Financial forecasting and fraud detection
+- Recommendation systems
+- Robotics and autonomous vehicles
+- Game playing (Chess, Go, video games)
+- Scientific simulations (weather forecasting, particle physics)

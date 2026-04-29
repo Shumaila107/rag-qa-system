@@ -1,0 +1,117 @@
+Source: Wikipedia - Natural Language Processing
+URL: https://en.wikipedia.org/wiki/Natural_language_processing
+
+Natural Language Processing
+
+Natural language processing (NLP) is an interdisciplinary subfield of computer science and artificial intelligence. It is primarily concerned with providing computers with the ability to process data encoded in natural language and is thus closely related to information retrieval, knowledge representation and computational linguistics, a subfield of linguistics.
+
+Typically, data is collected in text corpora, using either rule-based, statistical, or neural-based approaches to build systems that perform tasks such as speech tagging, parsing, named entity recognition, sentiment analysis, language translation, and question answering.
+
+History
+
+The history of natural language processing generally started in the 1950s, although work can be found from earlier periods. In 1950, Alan Turing published an article titled "Computing Machinery and Intelligence" which proposed what is now called the Turing test as a criterion of intelligence, a task that involves the automated interpretation and generation of natural language.
+
+The Georgetown–IBM experiment in 1954 involved fully automatic translation of more than sixty Russian sentences into English. The authors claimed that within three to five years, machine translation would be a solved problem. However, real progress was much slower, and after the ALPAC report in 1966, which found that ten-year-long research had failed to fulfill the expectations, funding for machine translation was dramatically reduced.
+
+The 1980s and 1990s saw a revolution in NLP with the introduction of machine learning algorithms for language processing. This was due in part to the steady increase in computational power and the gradual lessening of the dominance of Chomskyan theories of linguistics, in which the statistical approach to NLP was marginalised.
+
+In the 2010s, representation learning and deep neural networks became common in NLP research. Neural machine translation emerged as a major improvement over statistical approaches. Word embeddings (word2vec) were introduced in 2013 by Mikolov et al. at Google.
+
+Key NLP Tasks
+
+Text Classification
+
+Text classification is the task of assigning predefined categories to text. Applications include:
+- Spam detection
+- Sentiment analysis (positive/negative/neutral)
+- Topic categorization
+- Language identification
+- Intent detection in chatbots
+
+Named Entity Recognition (NER)
+
+Named entity recognition (NER) seeks to locate and classify named entities mentioned in unstructured text into pre-defined categories such as person names, organizations, locations, medical codes, time expressions, quantities, monetary values, percentages, etc.
+
+Machine Translation
+
+Machine translation is the task of automatically translating text from one language to another. Early approaches used rule-based systems. Statistical machine translation became dominant in the 2000s. Neural machine translation using encoder-decoder architectures became state-of-the-art in the 2010s.
+
+Question Answering
+
+Question answering (QA) is a computer science discipline within the fields of information retrieval and NLP that is concerned with building systems that automatically answer questions posed by humans in a natural language.
+
+Types of QA systems include:
+- Closed-domain: Specialized in a specific domain (e.g., medical or legal)
+- Open-domain: Can answer questions about any topic
+- Reading comprehension: Answers based on a given passage
+- Knowledge-base QA: Uses structured knowledge bases
+
+Sentiment Analysis
+
+Sentiment analysis or opinion mining is the use of NLP to identify and extract subjective information from text, especially opinions, attitudes, and emotions. Applications include brand monitoring, product review analysis, political opinion tracking, and customer feedback analysis.
+
+Text Summarization
+
+Text summarization is the task of producing a concise and fluent summary while preserving key information and overall meaning. Approaches include:
+- Extractive summarization: Selects key sentences from the source text
+- Abstractive summarization: Generates new text that captures the meaning
+
+Language Models and Embeddings
+
+Word Embeddings
+
+Word embeddings are dense vector representations of words where semantically similar words map to nearby points in vector space. Key methods include:
+- Word2Vec (2013): Predicts surrounding words (Skip-gram) or predicts target word from context (CBOW)
+- GloVe (2014): Uses global co-occurrence statistics
+- FastText: Handles subword information, useful for morphologically rich languages
+
+Contextualized Embeddings
+
+Unlike static word embeddings, contextualized embeddings change based on surrounding context:
+- ELMo (2018): Uses bidirectional LSTM to generate context-sensitive representations
+- BERT (2018): Bidirectional Encoder Representations from Transformers, trained with masked language modeling
+- GPT (2018): Generative Pre-trained Transformer, trained with language modeling
+
+Large Language Models
+
+Large language models (LLMs) are language models consisting of a neural network with many parameters (typically billions of weights), trained on large quantities of unlabeled text. LLMs emerged around 2018 and perform well at a wide variety of tasks.
+
+Notable LLMs include:
+- GPT-3 and GPT-4 (OpenAI): Used for various generation tasks
+- BERT and its variants (Google): Used for understanding tasks
+- T5 (Google): Text-to-text transfer transformer
+- LLaMA (Meta): Open-source large language model
+- Claude (Anthropic): Constitutional AI-based assistant
+
+Retrieval-Augmented Generation (RAG)
+
+Retrieval-Augmented Generation (RAG) is a technique that combines information retrieval with text generation. Instead of relying solely on the parametric knowledge stored in model weights, RAG systems:
+1. Retrieve relevant documents from a knowledge base using the user's query
+2. Pass the retrieved documents as context to an LLM
+3. Generate an answer grounded in the retrieved information
+
+RAG was introduced by Lewis et al. at Facebook AI Research in 2020. It addresses the problem of hallucination in LLMs by grounding responses in real documents. RAG systems are particularly useful for domain-specific question answering, where the LLM may not have sufficient training data.
+
+Key components of a RAG system:
+- Document store/vector database (FAISS, Chroma, Pinecone)
+- Embedding model to encode documents and queries
+- Retriever to find relevant documents
+- Generator LLM to produce final answers
+
+NLP Evaluation Metrics
+
+BLEU Score
+
+BLEU (Bilingual Evaluation Understudy) is an algorithm for evaluating the quality of text which has been machine-translated from one natural language to another. It measures n-gram overlap between generated and reference texts.
+
+ROUGE Score
+
+ROUGE (Recall-Oriented Understudy for Gisting Evaluation) is a set of metrics used for evaluating automatic summarization and machine translation. ROUGE-N measures n-gram recall, ROUGE-L measures longest common subsequence.
+
+Perplexity
+
+Perplexity is a measurement of how well a probability distribution or probability model predicts a sample. A lower perplexity score indicates better performance.
+
+F1 Score
+
+F1 score is commonly used for tasks like named entity recognition and question answering. It is the harmonic mean of precision and recall.

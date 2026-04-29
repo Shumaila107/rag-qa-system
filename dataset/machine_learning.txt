@@ -1,0 +1,82 @@
+Source: Wikipedia - Machine Learning
+URL: https://en.wikipedia.org/wiki/Machine_learning
+
+Machine Learning
+
+Machine learning (ML) is a field of study in artificial intelligence concerned with the development and study of statistical algorithms that can learn from data and generalize to unseen data, and thus perform tasks without explicit instructions. Recently, artificial neural networks have been able to surpass many previous approaches in performance.
+
+ML finds application in many fields, including natural language processing, computer vision, speech recognition, email filtering, agriculture, and medicine. The application of ML to business problems is known as predictive analytics.
+
+Statistics and mathematical optimization (mathematical programming) methods comprise the foundations of machine learning. Data mining is a related (parallel) field of study, focusing on exploratory data analysis (EDA) via unsupervised learning.
+
+From a theoretical viewpoint, probably approximately correct (PAC) learning provides a framework for describing machine learning.
+
+History
+
+The term machine learning was coined in 1959 by Arthur Samuel, an IBM employee and pioneer in the field of computer gaming and artificial intelligence. The synonym self-teaching computers was also used in this time period.
+
+By the early 1960s an experimental "learning machine" with punched tape memory, called Cybertron, had been developed by Raytheon Company to analyze sonar signals, electroencephalograms, and electrocardiograms. The program named SAINT, developed by James Slagle at MIT in 1963, was capable of solving freshman-level symbolic integration problems originally considered to require human intelligence.
+
+In 1967, the nearest neighbor algorithm was written, which is the foundation of basic pattern recognition. The algorithm was used to map routes and was one of the first algorithms to tackle the famous traveling salesman problem.
+
+In 1970, Seppo Linnainmaa published the general method for automatic differentiation (AD) of discrete connected networks of nested differentiable functions. This is the technique known as backpropagation, which is used to train deep learning models.
+
+In 1979, students at Stanford University invented the "Stanford Cart" which could navigate a chair-filled room on its own.
+
+In the 1980s and 1990s, the field experienced a major paradigm shift away from rule-based systems toward data-driven approaches. Support vector machines (SVMs) were introduced in 1992 by Boser, Guyon, and Vapnik.
+
+In 2009, the ImageNet dataset was released, enabling deep learning research to flourish. In 2012, the deep convolutional neural network AlexNet won the ImageNet competition by a large margin, marking the beginning of the deep learning era.
+
+Types of Machine Learning
+
+Supervised learning
+
+Supervised learning algorithms build a mathematical model of a set of data that contains both the inputs and the desired outputs. The data, known as training data, consists of a set of training examples. Each training example has one or more inputs and the desired output, also known as a supervisory signal. In the mathematical model, each training example is represented by an array or vector, sometimes called a feature vector, and the training data is represented by a matrix. Through iterative optimization of an objective function, supervised learning algorithms learn a function that can be used to predict the output associated with new inputs.
+
+Examples of supervised learning algorithms include linear regression, logistic regression, decision trees, random forests, support vector machines, and neural networks.
+
+Unsupervised learning
+
+Unsupervised learning algorithms find structures in data that has not been labeled, classified or categorized. Instead of responding to feedback, unsupervised learning algorithms identify commonalities in the data and react based on the presence or absence of such commonalities in each new piece of data.
+
+Common examples of unsupervised learning algorithms include k-means clustering, DBSCAN, hierarchical clustering, and autoencoders. Principal Component Analysis (PCA) is also an unsupervised technique used for dimensionality reduction.
+
+Reinforcement learning
+
+Reinforcement learning (RL) is an area of machine learning concerned with how intelligent agents ought to take actions in an environment in order to maximize the notion of cumulative reward. Reinforcement learning is one of three basic machine learning paradigms, alongside supervised learning and unsupervised learning.
+
+In RL, an agent interacts with an environment and learns through trial and error. The agent receives rewards for desirable actions and penalties for undesirable ones. Famous applications include DeepMind's AlphaGo, which defeated world champion Go players, and OpenAI's work on robotic manipulation.
+
+Semi-supervised learning
+
+Semi-supervised learning falls between unsupervised learning (without any labeled training data) and supervised learning (with completely labeled training data). It makes use of a small amount of labeled data and a large amount of unlabeled data during training. This approach is useful when labeling data is expensive or time-consuming.
+
+Self-supervised learning
+
+Self-supervised learning is a type of unsupervised learning where the system learns to predict part of its input from other parts. This includes methods like masked language modeling used in BERT and next-token prediction used in GPT models.
+
+Key Concepts
+
+Feature engineering
+
+Feature engineering is the process of using domain knowledge to extract features from raw data via data mining techniques. These features can be used to improve the performance of machine learning algorithms. Feature engineering can be very tedious and relies heavily on domain expertise and intuition.
+
+Overfitting and underfitting
+
+Overfitting occurs when a model learns the training data too well, including its noise and random fluctuations. An overfit model performs well on training data but poorly on unseen test data. Underfitting occurs when a model is too simple to capture the underlying patterns in the data.
+
+To combat overfitting, regularization techniques such as L1 (Lasso) and L2 (Ridge) regularization are commonly used. Cross-validation is another important technique for assessing model generalization.
+
+Bias-variance tradeoff
+
+The bias-variance tradeoff is a central problem in supervised learning. Ideally, one wants to choose a model that both accurately captures the regularities in its training data, but also generalizes well to unseen data. Unfortunately, it is typically impossible to do both simultaneously.
+
+Applications
+
+Machine learning has numerous applications across various industries:
+- Healthcare: Disease diagnosis, drug discovery, personalized medicine
+- Finance: Fraud detection, algorithmic trading, credit scoring
+- Transportation: Self-driving cars, route optimization, traffic prediction
+- Natural language processing: Machine translation, sentiment analysis, chatbots
+- Computer vision: Image classification, object detection, facial recognition
+- Recommendation systems: Netflix, Amazon, Spotify recommendations

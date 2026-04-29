@@ -1,0 +1,167 @@
+Source: Wikipedia - Large Language Model
+URL: https://en.wikipedia.org/wiki/Large_language_model
+
+Large Language Models
+
+A large language model (LLM) is a type of machine learning model designed for natural language processing tasks such as language generation. As language models, LLMs acquire these abilities by learning statistical relationships from vast amounts of text during a self-supervised and semi-supervised training process.
+
+The largest and most capable LLMs are artificial general intelligence (AGI) candidates, in the sense that they are able to perform a wide variety of tasks.
+
+Overview
+
+Large language models have emerged as a transformative technology in artificial intelligence. They are trained on massive text corpora—often hundreds of billions of tokens—and contain billions of parameters. This combination of scale gives them impressive abilities in language understanding, generation, reasoning, and more.
+
+LLMs are based on the transformer architecture, introduced in 2017. The key innovation is the self-attention mechanism, which allows the model to consider the full context of the input when generating each output token.
+
+Architecture
+
+Transformer Architecture
+
+Modern LLMs use variations of the original transformer architecture:
+
+Encoder-only models (e.g., BERT):
+- Process input bidirectionally
+- Suitable for understanding tasks (classification, NER, QA)
+- Trained with masked language modeling (MLM)
+
+Decoder-only models (e.g., GPT):
+- Process input autoregressively (left to right)
+- Suitable for generation tasks
+- Trained with causal language modeling (CLM)
+
+Encoder-decoder models (e.g., T5, BART):
+- Combine encoder for understanding and decoder for generation
+- Suitable for translation, summarization
+
+Attention Mechanism
+
+The attention mechanism computes a weighted sum of values, where weights are determined by the similarity between a query and a set of keys. Multi-head attention applies multiple attention operations in parallel, allowing the model to attend to information from different representation subspaces.
+
+Self-attention: Query, Key, and Value all come from the same sequence
+Cross-attention: Query from one sequence, Key and Value from another
+
+Training
+
+Pre-training
+
+LLMs are first pre-trained on massive text corpora using self-supervised objectives:
+- Causal Language Modeling: Predict the next token given previous tokens
+- Masked Language Modeling: Predict masked tokens from context
+
+Pre-training datasets include:
+- CommonCrawl: Web crawl data
+- Books and Wikipedia
+- GitHub code
+- Academic papers (Arxiv)
+- Social media (Reddit, StackExchange)
+
+Fine-tuning
+
+After pre-training, LLMs can be fine-tuned for specific tasks:
+- Supervised Fine-Tuning (SFT): Train on curated instruction-following data
+- Reinforcement Learning from Human Feedback (RLHF): Use human preferences to guide learning
+- Direct Preference Optimization (DPO): Alternative to RLHF
+
+Scaling Laws
+
+Research by Kaplan et al. (2020) at OpenAI showed that model performance scales predictably with compute, data, and parameter count according to power laws. The Chinchilla paper (Hoffmann et al., 2022) revised these laws to suggest models should be trained on more data relative to their size.
+
+Notable Large Language Models
+
+GPT Series (OpenAI)
+- GPT-1 (2018): 117M parameters
+- GPT-2 (2019): 1.5B parameters, controversial release
+- GPT-3 (2020): 175B parameters, demonstrated few-shot learning
+- InstructGPT (2022): Fine-tuned with RLHF
+- GPT-4 (2023): Multimodal, significantly improved reasoning
+
+BERT and Variants (Google)
+- BERT (2018): 340M parameters, bidirectional
+- RoBERTa: Optimized BERT training
+- DistilBERT: Lightweight BERT
+- ALBERT: Parameter-efficient BERT
+
+PaLM and Gemini (Google)
+- PaLM (2022): 540B parameters, strong reasoning
+- PaLM 2: Improved multilingual capabilities
+- Gemini: Multimodal model family
+
+LLaMA Series (Meta)
+- LLaMA (2023): Open-weight model
+- LLaMA 2: Improved, commercially licensed
+- LLaMA 3: State-of-the-art open model
+
+Claude (Anthropic)
+- Constitutional AI training approach
+- Designed to be helpful, harmless, and honest
+- Claude 3 family: Haiku, Sonnet, Opus
+
+Capabilities and Limitations
+
+Capabilities
+- Text generation and completion
+- Question answering
+- Summarization and translation
+- Code generation and debugging
+- Mathematical reasoning
+- Few-shot and zero-shot learning
+- In-context learning from examples
+
+Limitations and Challenges
+- Hallucination: Generating factually incorrect information confidently
+- Knowledge cutoff: Training data has a fixed end date
+- Context length: Limited context window size
+- Bias: Reflects biases present in training data
+- Computational cost: Expensive to train and run
+- Interpretability: Difficult to understand internal reasoning
+
+Hallucination
+
+LLM hallucination refers to the phenomenon where LLMs generate text that is factually incorrect, nonsensical, or unfaithful to the provided context. This remains one of the most significant challenges in LLM deployment.
+
+Approaches to reduce hallucination:
+- Retrieval Augmented Generation (RAG): Ground responses in retrieved documents
+- Chain-of-thought prompting: Encourage step-by-step reasoning
+- Constitutional AI: Use self-critique to improve responses
+- Calibration: Make models express uncertainty appropriately
+
+Retrieval-Augmented Generation (RAG)
+
+RAG is a technique that augments LLMs with external knowledge retrieval. The process:
+1. Index a knowledge base with dense vector embeddings
+2. When a query is received, encode it with the same embedding model
+3. Retrieve the top-k most similar documents using cosine similarity or dot product
+4. Include retrieved documents in the LLM's context
+5. Generate an answer grounded in the retrieved information
+
+RAG systems typically use vector databases such as FAISS, Chroma, Weaviate, or Pinecone for efficient similarity search.
+
+Embeddings for RAG
+
+Common embedding models used in RAG:
+- OpenAI text-embedding-ada-002: Popular, high-quality
+- Sentence Transformers: Open-source, various sizes
+- all-MiniLM-L6-v2: Fast and efficient
+- INSTRUCTOR: Instruction-following embeddings
+- BGE models: State-of-the-art open-source embeddings
+
+Evaluation of LLMs
+
+LLMs are evaluated on standardized benchmarks:
+- MMLU: Massive Multitask Language Understanding
+- HellaSwag: Commonsense reasoning
+- HumanEval: Code generation
+- GSM8K: Grade school math
+- BIG-Bench: Diverse tasks beyond current capabilities
+
+Ethical Considerations
+
+LLMs raise several ethical concerns:
+- Bias and fairness: Models can perpetuate and amplify societal biases
+- Misinformation: Can be used to generate convincing fake content
+- Privacy: Training data may contain private information
+- Environmental impact: Training requires significant energy
+- Job displacement: May automate human tasks
+- Copyright: Trained on copyrighted material
+
+Responsible AI development for LLMs includes safety research, red teaming, and alignment techniques to ensure models are helpful, harmless, and honest.

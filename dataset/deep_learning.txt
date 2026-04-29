@@ -1,0 +1,106 @@
+Source: Wikipedia - Deep Learning
+URL: https://en.wikipedia.org/wiki/Deep_learning
+
+Deep Learning
+
+Deep learning is part of a broader family of machine learning methods, which is based on artificial neural networks with representation learning. The adjective "deep" in deep learning refers to the use of multiple layers in the network. Methods used can be either supervised, semi-supervised or unsupervised.
+
+Deep-learning architectures such as deep neural networks, recurrent neural networks (RNNs), convolutional neural networks (CNNs), long short-term memory (LSTM), transformers, and others have been applied to fields including computer vision, speech recognition, natural language processing, machine translation, bioinformatics, drug design, medical image analysis, climate science, material inspection and board game programs.
+
+History
+
+The first general, working learning algorithm for supervised deep feedforward multilayer perceptrons was published by Alexey Ivakhnenko and Lapa in 1967. A 1971 paper described a deep network with eight layers trained by the group method of data handling algorithm.
+
+Other deep learning working architectures, specifically those built for computer vision, began with the Neocognitron introduced by Kunihiko Fukushima in 1980.
+
+In 1989, Yann LeCun and colleagues applied the standard backpropagation algorithm to a deep neural network with the purpose of recognizing handwritten zip code numbers provided by the US Postal Service.
+
+The vanishing gradient problem was identified by Sepp Hochreiter in 1991 and his advisor Jürgen Schmidhuber in 1992. This problem affected training of deep networks, as gradients became very small during backpropagation.
+
+In 1997, Hochreiter and Schmidhuber proposed long short-term memory (LSTM), which overcame the vanishing gradient problem for recurrent networks. LSTM became widely used for sequence-to-sequence tasks.
+
+The breakthrough moment came in 2012 when AlexNet, a convolutional neural network designed by Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton, won the ImageNet Large Scale Visual Recognition Challenge (ILSVRC) with top-5 error rates dramatically better than non-deep approaches.
+
+Neural Network Architectures
+
+Convolutional Neural Networks (CNNs)
+
+A convolutional neural network (CNN) is a type of artificial neural network used primarily for image recognition, classification, and analysis. CNNs are distinguished from other neural networks by their superior performance with image, speech, or audio signal inputs.
+
+A CNN typically consists of:
+- Convolutional layers that apply filters to detect features
+- Pooling layers that reduce spatial dimensions
+- Fully connected layers for classification
+- Activation functions like ReLU
+
+Famous CNN architectures include LeNet, AlexNet, VGG, GoogLeNet/Inception, ResNet, and EfficientNet.
+
+Recurrent Neural Networks (RNNs)
+
+A recurrent neural network (RNN) is a class of artificial neural networks where connections between nodes can create a cycle, allowing output from some nodes to affect subsequent input to the same nodes. This allows it to exhibit temporal dynamic behavior.
+
+RNNs can use their internal state (memory) to process variable-length sequences of inputs, making them applicable to tasks such as unsegmented, connected handwriting recognition, speech recognition, and natural language processing.
+
+Long Short-Term Memory (LSTM)
+
+Long short-term memory (LSTM) networks are a type of recurrent neural network capable of learning long-term dependencies. They were introduced by Hochreiter and Schmidhuber in 1997 and have been refined and popularized in subsequent work.
+
+LSTM units are composed of a cell, an input gate, an output gate and a forget gate. The cell remembers values over arbitrary time intervals and the three gates regulate the flow of information into and out of the cell.
+
+Transformer Architecture
+
+The transformer is a deep learning architecture introduced in the paper "Attention Is All You Need" by Vaswani et al. in 2017. It relies entirely on self-attention mechanisms to draw global dependencies between input and output.
+
+Transformers have become the dominant architecture in natural language processing. They are the basis for large language models (LLMs) such as GPT, BERT, T5, and many others.
+
+The key innovation of transformers is the attention mechanism, which allows the model to weigh the importance of different parts of the input when producing each part of the output.
+
+Generative Adversarial Networks (GANs)
+
+A generative adversarial network (GAN) is a class of machine learning frameworks designed by Ian Goodfellow and his colleagues in June 2014. Two neural networks contest with each other in the form of a zero-sum game, where one agent's gain is another agent's loss.
+
+Given a training set, this technique learns to generate new data with the same statistics as the training set. For example, a GAN trained on photographs can generate new photographs that look at least superficially authentic to human observers.
+
+Autoencoders
+
+An autoencoder is a type of artificial neural network used to learn efficient codings of unlabeled data (unsupervised learning). An autoencoder learns two functions: an encoding function that transforms the input data, and a decoding function that recreates the input data from the encoded representation.
+
+Variational autoencoders (VAEs) are a probabilistic variant that learn a latent space representation and can be used to generate new data.
+
+Training Deep Networks
+
+Activation Functions
+
+Activation functions determine the output of a neural network node given an input or set of inputs. Common activation functions include:
+- Sigmoid: Maps values to range (0,1), used for binary classification
+- ReLU (Rectified Linear Unit): max(0,x), helps solve vanishing gradient problem
+- Tanh: Maps values to range (-1,1)
+- Softmax: Used in output layer for multi-class classification
+- GELU: Used in transformer models like BERT and GPT
+
+Optimization Algorithms
+
+Gradient descent is the primary optimization algorithm for training neural networks. Variants include:
+- Stochastic Gradient Descent (SGD): Updates weights using one sample at a time
+- Mini-batch Gradient Descent: Uses small batches of data
+- Adam: Adaptive learning rate optimizer, widely used in practice
+- RMSprop: Adapts learning rates based on recent gradient magnitudes
+
+Regularization
+
+To prevent overfitting in deep networks:
+- Dropout: Randomly deactivates neurons during training
+- Batch Normalization: Normalizes layer inputs to improve training stability
+- Weight Decay (L2 regularization): Penalizes large weights
+- Data Augmentation: Artificially increases training set size
+
+Applications of Deep Learning
+
+Deep learning has revolutionized many fields:
+- Image recognition and object detection
+- Natural language processing and machine translation
+- Speech recognition and synthesis
+- Drug discovery and protein structure prediction (AlphaFold)
+- Autonomous vehicles
+- Game playing (AlphaGo, AlphaZero)
+- Art and music generation

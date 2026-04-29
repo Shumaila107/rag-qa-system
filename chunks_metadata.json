@@ -1,0 +1,860 @@
+{
+  "chunks": [
+    "Source: Wikipedia - Deep Learning\nURL: https://en.wikipedia.org/wiki/Deep_learning\n\nDeep Learning\n\nDeep learning is part of a broader family of machine learning methods, which is based on artificial neural networks with representation learning. The adjective \"deep\" in deep learning refers to the use of multiple layers in the network. Methods used can be either supervised, semi-supervised or unsupervised.",
+    "tiple layers in the network. Methods used can be either supervised, semi-supervised or unsupervised.\n\nDeep-learning architectures such as deep neural networks, recurrent neural networks (RNNs), convolutional neural networks (CNNs), long short-term memory (LSTM), transformers, and others have been applied to fields including computer vision, speech recognition, natural language processing, machine translation, bioinformatics, drug design, medical image analysis, climate science, material inspecti",
+    "translation, bioinformatics, drug design, medical image analysis, climate science, material inspection and board game programs.\n\nHistory\n\nThe first general, working learning algorithm for supervised deep feedforward multilayer perceptrons was published by Alexey Ivakhnenko and Lapa in 1967. A 1971 paper described a deep network with eight layers trained by the group method of data handling algorithm.",
+    "r described a deep network with eight layers trained by the group method of data handling algorithm.\n\nOther deep learning working architectures, specifically those built for computer vision, began with the Neocognitron introduced by Kunihiko Fukushima in 1980.\n\nIn 1989, Yann LeCun and colleagues applied the standard backpropagation algorithm to a deep neural network with the purpose of recognizing handwritten zip code numbers provided by the US Postal Service.",
+    "work with the purpose of recognizing handwritten zip code numbers provided by the US Postal Service.\n\nThe vanishing gradient problem was identified by Sepp Hochreiter in 1991 and his advisor J\u00fcrgen Schmidhuber in 1992. This problem affected training of deep networks, as gradients became very small during backpropagation.",
+    "s problem affected training of deep networks, as gradients became very small during backpropagation.\n\nIn 1997, Hochreiter and Schmidhuber proposed long short-term memory (LSTM), which overcame the vanishing gradient problem for recurrent networks. LSTM became widely used for sequence-to-sequence tasks.",
+    "ing gradient problem for recurrent networks. LSTM became widely used for sequence-to-sequence tasks.\n\nThe breakthrough moment came in 2012 when AlexNet, a convolutional neural network designed by Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton, won the ImageNet Large Scale Visual Recognition Challenge (ILSVRC) with top-5 error rates dramatically better than non-deep approaches.\n\nNeural Network Architectures\n\nConvolutional Neural Networks (CNNs)",
+    "better than non-deep approaches.\n\nNeural Network Architectures\n\nConvolutional Neural Networks (CNNs)\n\nA convolutional neural network (CNN) is a type of artificial neural network used primarily for image recognition, classification, and analysis. CNNs are distinguished from other neural networks by their superior performance with image, speech, or audio signal inputs.",
+    "from other neural networks by their superior performance with image, speech, or audio signal inputs.\n\nA CNN typically consists of:\n- Convolutional layers that apply filters to detect features\n- Pooling layers that reduce spatial dimensions\n- Fully connected layers for classification\n- Activation functions like ReLU\n\nFamous CNN architectures include LeNet, AlexNet, VGG, GoogLeNet/Inception, ResNet, and EfficientNet.\n\nRecurrent Neural Networks (RNNs)",
+    "eNet, AlexNet, VGG, GoogLeNet/Inception, ResNet, and EfficientNet.\n\nRecurrent Neural Networks (RNNs)\n\nA recurrent neural network (RNN) is a class of artificial neural networks where connections between nodes can create a cycle, allowing output from some nodes to affect subsequent input to the same nodes. This allows it to exhibit temporal dynamic behavior.",
+    "s to affect subsequent input to the same nodes. This allows it to exhibit temporal dynamic behavior.\n\nRNNs can use their internal state (memory) to process variable-length sequences of inputs, making them applicable to tasks such as unsegmented, connected handwriting recognition, speech recognition, and natural language processing.\n\nLong Short-Term Memory (LSTM)",
+    "ing recognition, speech recognition, and natural language processing.\n\nLong Short-Term Memory (LSTM)\n\nLong short-term memory (LSTM) networks are a type of recurrent neural network capable of learning long-term dependencies. They were introduced by Hochreiter and Schmidhuber in 1997 and have been refined and popularized in subsequent work.",
+    "uced by Hochreiter and Schmidhuber in 1997 and have been refined and popularized in subsequent work.\n\nLSTM units are composed of a cell, an input gate, an output gate and a forget gate. The cell remembers values over arbitrary time intervals and the three gates regulate the flow of information into and out of the cell.\n\nTransformer Architecture",
+    "the three gates regulate the flow of information into and out of the cell.\n\nTransformer Architecture\n\nThe transformer is a deep learning architecture introduced in the paper \"Attention Is All You Need\" by Vaswani et al. in 2017. It relies entirely on self-attention mechanisms to draw global dependencies between input and output.",
+    "t relies entirely on self-attention mechanisms to draw global dependencies between input and output.\n\nTransformers have become the dominant architecture in natural language processing. They are the basis for large language models (LLMs) such as GPT, BERT, T5, and many others.\n\nThe key innovation of transformers is the attention mechanism, which allows the model to weigh the importance of different parts of the input when producing each part of the output.",
+    "odel to weigh the importance of different parts of the input when producing each part of the output.\n\nGenerative Adversarial Networks (GANs)\n\nA generative adversarial network (GAN) is a class of machine learning frameworks designed by Ian Goodfellow and his colleagues in June 2014. Two neural networks contest with each other in the form of a zero-sum game, where one agent's gain is another agent's loss.",
+    "test with each other in the form of a zero-sum game, where one agent's gain is another agent's loss.\n\nGiven a training set, this technique learns to generate new data with the same statistics as the training set. For example, a GAN trained on photographs can generate new photographs that look at least superficially authentic to human observers.\n\nAutoencoders",
+    "enerate new photographs that look at least superficially authentic to human observers.\n\nAutoencoders\n\nAn autoencoder is a type of artificial neural network used to learn efficient codings of unlabeled data (unsupervised learning). An autoencoder learns two functions: an encoding function that transforms the input data, and a decoding function that recreates the input data from the encoded representation.",
+    "e input data, and a decoding function that recreates the input data from the encoded representation.\n\nVariational autoencoders (VAEs) are a probabilistic variant that learn a latent space representation and can be used to generate new data.\n\nTraining Deep Networks\n\nActivation Functions",
+    "e representation and can be used to generate new data.\n\nTraining Deep Networks\n\nActivation Functions\n\nActivation functions determine the output of a neural network node given an input or set of inputs. Common activation functions include:\n- Sigmoid: Maps values to range (0,1), used for binary classification\n- ReLU (Rectified Linear Unit): max(0,x), helps solve vanishing gradient problem\n- Tanh: Maps values to range (-1,1)\n- Softmax: Used in output layer for multi-class classification\n- GELU: Use",
+    "ps values to range (-1,1)\n- Softmax: Used in output layer for multi-class classification\n- GELU: Used in transformer models like BERT and GPT\n\nOptimization Algorithms\n\nGradient descent is the primary optimization algorithm for training neural networks.",
+    "ion Algorithms\n\nGradient descent is the primary optimization algorithm for training neural networks. Variants include:\n- Stochastic Gradient Descent (SGD): Updates weights using one sample at a time\n- Mini-batch Gradient Descent: Uses small batches of data\n- Adam: Adaptive learning rate optimizer, widely used in practice\n- RMSprop: Adapts learning rates based on recent gradient magnitudes\n\nRegularization",
+    "sed in practice\n- RMSprop: Adapts learning rates based on recent gradient magnitudes\n\nRegularization\n\nTo prevent overfitting in deep networks:\n- Dropout: Randomly deactivates neurons during training\n- Batch Normalization: Normalizes layer inputs to improve training stability\n- Weight Decay (L2 regularization): Penalizes large weights\n- Data Augmentation: Artificially increases training set size\n\nApplications of Deep Learning",
+    "weights\n- Data Augmentation: Artificially increases training set size\n\nApplications of Deep Learning\n\nDeep learning has revolutionized many fields:\n- Image recognition and object detection\n- Natural language processing and machine translation\n- Speech recognition and synthesis\n- Drug discovery and protein structure prediction (AlphaFold)\n- Autonomous vehicles\n- Game playing (AlphaGo, AlphaZero)\n- Art and music generation",
+    "Source: Wikipedia - Large Language Model\nURL: https://en.wikipedia.org/wiki/Large_language_model\n\nLarge Language Models\n\nA large language model (LLM) is a type of machine learning model designed for natural language processing tasks such as language generation. As language models, LLMs acquire these abilities by learning statistical relationships from vast amounts of text during a self-supervised and semi-supervised training process.",
+    "lationships from vast amounts of text during a self-supervised and semi-supervised training process.\n\nThe largest and most capable LLMs are artificial general intelligence (AGI) candidates, in the sense that they are able to perform a wide variety of tasks.\n\nOverview",
+    "ence (AGI) candidates, in the sense that they are able to perform a wide variety of tasks.\n\nOverview\n\nLarge language models have emerged as a transformative technology in artificial intelligence. They are trained on massive text corpora\u2014often hundreds of billions of tokens\u2014and contain billions of parameters. This combination of scale gives them impressive abilities in language understanding, generation, reasoning, and more.",
+    "of scale gives them impressive abilities in language understanding, generation, reasoning, and more.\n\nLLMs are based on the transformer architecture, introduced in 2017. The key innovation is the self-attention mechanism, which allows the model to consider the full context of the input when generating each output token.\n\nArchitecture\n\nTransformer Architecture\n\nModern LLMs use variations of the original transformer architecture:",
+    "ture\n\nTransformer Architecture\n\nModern LLMs use variations of the original transformer architecture:\n\nEncoder-only models (e.g., BERT):\n- Process input bidirectionally\n- Suitable for understanding tasks (classification, NER, QA)\n- Trained with masked language modeling (MLM)\n\nDecoder-only models (e.g., GPT):\n- Process input autoregressively (left to right)\n- Suitable for generation tasks\n- Trained with causal language modeling (CLM)",
+    "sively (left to right)\n- Suitable for generation tasks\n- Trained with causal language modeling (CLM)\n\nEncoder-decoder models (e.g., T5, BART):\n- Combine encoder for understanding and decoder for generation\n- Suitable for translation, summarization\n\nAttention Mechanism",
+    "erstanding and decoder for generation\n- Suitable for translation, summarization\n\nAttention Mechanism\n\nThe attention mechanism computes a weighted sum of values, where weights are determined by the similarity between a query and a set of keys. Multi-head attention applies multiple attention operations in parallel, allowing the model to attend to information from different representation subspaces.",
+    "ns in parallel, allowing the model to attend to information from different representation subspaces.\n\nSelf-attention: Query, Key, and Value all come from the same sequence\nCross-attention: Query from one sequence, Key and Value from another\n\nTraining\n\nPre-training\n\nLLMs are first pre-trained on massive text corpora using self-supervised objectives:\n- Causal Language Modeling: Predict the next token given previous tokens\n- Masked Language Modeling: Predict masked tokens from context",
+    "the next token given previous tokens\n- Masked Language Modeling: Predict masked tokens from context\n\nPre-training datasets include:\n- CommonCrawl: Web crawl data\n- Books and Wikipedia\n- GitHub code\n- Academic papers (Arxiv)\n- Social media (Reddit, StackExchange)\n\nFine-tuning",
+    "ikipedia\n- GitHub code\n- Academic papers (Arxiv)\n- Social media (Reddit, StackExchange)\n\nFine-tuning\n\nAfter pre-training, LLMs can be fine-tuned for specific tasks:\n- Supervised Fine-Tuning (SFT): Train on curated instruction-following data\n- Reinforcement Learning from Human Feedback (RLHF): Use human preferences to guide learning\n- Direct Preference Optimization (DPO): Alternative to RLHF\n\nScaling Laws",
+    "ferences to guide learning\n- Direct Preference Optimization (DPO): Alternative to RLHF\n\nScaling Laws\n\nResearch by Kaplan et al. (2020) at OpenAI showed that model performance scales predictably with compute, data, and parameter count according to power laws. The Chinchilla paper (Hoffmann et al., 2022) revised these laws to suggest models should be trained on more data relative to their size.\n\nNotable Large Language Models",
+    "suggest models should be trained on more data relative to their size.\n\nNotable Large Language Models\n\nGPT Series (OpenAI)\n- GPT-1 (2018): 117M parameters\n- GPT-2 (2019): 1.5B parameters, controversial release\n- GPT-3 (2020): 175B parameters, demonstrated few-shot learning\n- InstructGPT (2022): Fine-tuned with RLHF\n- GPT-4 (2023): Multimodal, significantly improved reasoning",
+    "nstructGPT (2022): Fine-tuned with RLHF\n- GPT-4 (2023): Multimodal, significantly improved reasoning\n\nBERT and Variants (Google)\n- BERT (2018): 340M parameters, bidirectional\n- RoBERTa: Optimized BERT training\n- DistilBERT: Lightweight BERT\n- ALBERT: Parameter-efficient BERT\n\nPaLM and Gemini (Google)\n- PaLM (2022): 540B parameters, strong reasoning\n- PaLM 2: Improved multilingual capabilities\n- Gemini: Multimodal model family",
+    "ers, strong reasoning\n- PaLM 2: Improved multilingual capabilities\n- Gemini: Multimodal model family\n\nLLaMA Series (Meta)\n- LLaMA (2023): Open-weight model\n- LLaMA 2: Improved, commercially licensed\n- LLaMA 3: State-of-the-art open model\n\nClaude (Anthropic)\n- Constitutional AI training approach\n- Designed to be helpful, harmless, and honest\n- Claude 3 family: Haiku, Sonnet, Opus\n\nCapabilities and Limitations",
+    "e helpful, harmless, and honest\n- Claude 3 family: Haiku, Sonnet, Opus\n\nCapabilities and Limitations\n\nCapabilities\n- Text generation and completion\n- Question answering\n- Summarization and translation\n- Code generation and debugging\n- Mathematical reasoning\n- Few-shot and zero-shot learning\n- In-context learning from examples",
+    "gging\n- Mathematical reasoning\n- Few-shot and zero-shot learning\n- In-context learning from examples\n\nLimitations and Challenges\n- Hallucination: Generating factually incorrect information confidently\n- Knowledge cutoff: Training data has a fixed end date\n- Context length: Limited context window size\n- Bias: Reflects biases present in training data\n- Computational cost: Expensive to train and run\n- Interpretability: Difficult to understand internal reasoning\n\nHallucination",
+    "nsive to train and run\n- Interpretability: Difficult to understand internal reasoning\n\nHallucination\n\nLLM hallucination refers to the phenomenon where LLMs generate text that is factually incorrect, nonsensical, or unfaithful to the provided context. This remains one of the most significant challenges in LLM deployment.",
+    "hful to the provided context. This remains one of the most significant challenges in LLM deployment.\n\nApproaches to reduce hallucination:\n- Retrieval Augmented Generation (RAG): Ground responses in retrieved documents\n- Chain-of-thought prompting: Encourage step-by-step reasoning\n- Constitutional AI: Use self-critique to improve responses\n- Calibration: Make models express uncertainty appropriately\n\nRetrieval-Augmented Generation (RAG)",
+    "s\n- Calibration: Make models express uncertainty appropriately\n\nRetrieval-Augmented Generation (RAG)\n\nRAG is a technique that augments LLMs with external knowledge retrieval. The process:\n1. Index a knowledge base with dense vector embeddings\n2. When a query is received, encode it with the same embedding model\n3. Retrieve the top-k most similar documents using cosine similarity or dot product\n4. Include retrieved documents in the LLM's context\n5.",
+    "uments using cosine similarity or dot product\n4. Include retrieved documents in the LLM's context\n5. Generate an answer grounded in the retrieved information\n\nRAG systems typically use vector databases such as FAISS, Chroma, Weaviate, or Pinecone for efficient similarity search.\n\nEmbeddings for RAG",
+    "es such as FAISS, Chroma, Weaviate, or Pinecone for efficient similarity search.\n\nEmbeddings for RAG\n\nCommon embedding models used in RAG:\n- OpenAI text-embedding-ada-002: Popular, high-quality\n- Sentence Transformers: Open-source, various sizes\n- all-MiniLM-L6-v2: Fast and efficient\n- INSTRUCTOR: Instruction-following embeddings\n- BGE models: State-of-the-art open-source embeddings\n\nEvaluation of LLMs",
+    "ction-following embeddings\n- BGE models: State-of-the-art open-source embeddings\n\nEvaluation of LLMs\n\nLLMs are evaluated on standardized benchmarks:\n- MMLU: Massive Multitask Language Understanding\n- HellaSwag: Commonsense reasoning\n- HumanEval: Code generation\n- GSM8K: Grade school math\n- BIG-Bench: Diverse tasks beyond current capabilities\n\nEthical Considerations",
+    "8K: Grade school math\n- BIG-Bench: Diverse tasks beyond current capabilities\n\nEthical Considerations\n\nLLMs raise several ethical concerns:\n- Bias and fairness: Models can perpetuate and amplify societal biases\n- Misinformation: Can be used to generate convincing fake content\n- Privacy: Training data may contain private information\n- Environmental impact: Training requires significant energy\n- Job displacement: May automate human tasks\n- Copyright: Trained on copyrighted material",
+    "ant energy\n- Job displacement: May automate human tasks\n- Copyright: Trained on copyrighted material\n\nResponsible AI development for LLMs includes safety research, red teaming, and alignment techniques to ensure models are helpful, harmless, and honest.",
+    "Source: Wikipedia - Machine Learning\nURL: https://en.wikipedia.org/wiki/Machine_learning\n\nMachine Learning\n\nMachine learning (ML) is a field of study in artificial intelligence concerned with the development and study of statistical algorithms that can learn from data and generalize to unseen data, and thus perform tasks without explicit instructions. Recently, artificial neural networks have been able to surpass many previous approaches in performance.",
+    "ently, artificial neural networks have been able to surpass many previous approaches in performance.\n\nML finds application in many fields, including natural language processing, computer vision, speech recognition, email filtering, agriculture, and medicine. The application of ML to business problems is known as predictive analytics.",
+    "iculture, and medicine. The application of ML to business problems is known as predictive analytics.\n\nStatistics and mathematical optimization (mathematical programming) methods comprise the foundations of machine learning. Data mining is a related (parallel) field of study, focusing on exploratory data analysis (EDA) via unsupervised learning.\n\nFrom a theoretical viewpoint, probably approximately correct (PAC) learning provides a framework for describing machine learning.\n\nHistory",
+    "approximately correct (PAC) learning provides a framework for describing machine learning.\n\nHistory\n\nThe term machine learning was coined in 1959 by Arthur Samuel, an IBM employee and pioneer in the field of computer gaming and artificial intelligence. The synonym self-teaching computers was also used in this time period.",
+    "and artificial intelligence. The synonym self-teaching computers was also used in this time period.\n\nBy the early 1960s an experimental \"learning machine\" with punched tape memory, called Cybertron, had been developed by Raytheon Company to analyze sonar signals, electroencephalograms, and electrocardiograms.",
+    "veloped by Raytheon Company to analyze sonar signals, electroencephalograms, and electrocardiograms. The program named SAINT, developed by James Slagle at MIT in 1963, was capable of solving freshman-level symbolic integration problems originally considered to require human intelligence.",
+    "ng freshman-level symbolic integration problems originally considered to require human intelligence.\n\nIn 1967, the nearest neighbor algorithm was written, which is the foundation of basic pattern recognition. The algorithm was used to map routes and was one of the first algorithms to tackle the famous traveling salesman problem.",
+    "d to map routes and was one of the first algorithms to tackle the famous traveling salesman problem.\n\nIn 1970, Seppo Linnainmaa published the general method for automatic differentiation (AD) of discrete connected networks of nested differentiable functions. This is the technique known as backpropagation, which is used to train deep learning models.\n\nIn 1979, students at Stanford University invented the \"Stanford Cart\" which could navigate a chair-filled room on its own.",
+    "tanford University invented the \"Stanford Cart\" which could navigate a chair-filled room on its own.\n\nIn the 1980s and 1990s, the field experienced a major paradigm shift away from rule-based systems toward data-driven approaches. Support vector machines (SVMs) were introduced in 1992 by Boser, Guyon, and Vapnik.",
+    "iven approaches. Support vector machines (SVMs) were introduced in 1992 by Boser, Guyon, and Vapnik.\n\nIn 2009, the ImageNet dataset was released, enabling deep learning research to flourish. In 2012, the deep convolutional neural network AlexNet won the ImageNet competition by a large margin, marking the beginning of the deep learning era.\n\nTypes of Machine Learning\n\nSupervised learning",
+    "gin, marking the beginning of the deep learning era.\n\nTypes of Machine Learning\n\nSupervised learning\n\nSupervised learning algorithms build a mathematical model of a set of data that contains both the inputs and the desired outputs. The data, known as training data, consists of a set of training examples. Each training example has one or more inputs and the desired output, also known as a supervisory signal.",
+    "training example has one or more inputs and the desired output, also known as a supervisory signal. In the mathematical model, each training example is represented by an array or vector, sometimes called a feature vector, and the training data is represented by a matrix. Through iterative optimization of an objective function, supervised learning algorithms learn a function that can be used to predict the output associated with new inputs.",
+    "rning algorithms learn a function that can be used to predict the output associated with new inputs.\n\nExamples of supervised learning algorithms include linear regression, logistic regression, decision trees, random forests, support vector machines, and neural networks.\n\nUnsupervised learning",
+    "decision trees, random forests, support vector machines, and neural networks.\n\nUnsupervised learning\n\nUnsupervised learning algorithms find structures in data that has not been labeled, classified or categorized. Instead of responding to feedback, unsupervised learning algorithms identify commonalities in the data and react based on the presence or absence of such commonalities in each new piece of data.",
+    "the data and react based on the presence or absence of such commonalities in each new piece of data.\n\nCommon examples of unsupervised learning algorithms include k-means clustering, DBSCAN, hierarchical clustering, and autoencoders. Principal Component Analysis (PCA) is also an unsupervised technique used for dimensionality reduction.\n\nReinforcement learning",
+    "s (PCA) is also an unsupervised technique used for dimensionality reduction.\n\nReinforcement learning\n\nReinforcement learning (RL) is an area of machine learning concerned with how intelligent agents ought to take actions in an environment in order to maximize the notion of cumulative reward. Reinforcement learning is one of three basic machine learning paradigms, alongside supervised learning and unsupervised learning.",
+    "of three basic machine learning paradigms, alongside supervised learning and unsupervised learning.\n\nIn RL, an agent interacts with an environment and learns through trial and error. The agent receives rewards for desirable actions and penalties for undesirable ones. Famous applications include DeepMind's AlphaGo, which defeated world champion Go players, and OpenAI's work on robotic manipulation.\n\nSemi-supervised learning",
+    "ated world champion Go players, and OpenAI's work on robotic manipulation.\n\nSemi-supervised learning\n\nSemi-supervised learning falls between unsupervised learning (without any labeled training data) and supervised learning (with completely labeled training data). It makes use of a small amount of labeled data and a large amount of unlabeled data during training. This approach is useful when labeling data is expensive or time-consuming.\n\nSelf-supervised learning",
+    "This approach is useful when labeling data is expensive or time-consuming.\n\nSelf-supervised learning\n\nSelf-supervised learning is a type of unsupervised learning where the system learns to predict part of its input from other parts. This includes methods like masked language modeling used in BERT and next-token prediction used in GPT models.\n\nKey Concepts\n\nFeature engineering",
+    "deling used in BERT and next-token prediction used in GPT models.\n\nKey Concepts\n\nFeature engineering\n\nFeature engineering is the process of using domain knowledge to extract features from raw data via data mining techniques. These features can be used to improve the performance of machine learning algorithms. Feature engineering can be very tedious and relies heavily on domain expertise and intuition.\n\nOverfitting and underfitting",
+    "be very tedious and relies heavily on domain expertise and intuition.\n\nOverfitting and underfitting\n\nOverfitting occurs when a model learns the training data too well, including its noise and random fluctuations. An overfit model performs well on training data but poorly on unseen test data. Underfitting occurs when a model is too simple to capture the underlying patterns in the data.",
+    "data. Underfitting occurs when a model is too simple to capture the underlying patterns in the data.\n\nTo combat overfitting, regularization techniques such as L1 (Lasso) and L2 (Ridge) regularization are commonly used. Cross-validation is another important technique for assessing model generalization.\n\nBias-variance tradeoff",
+    "alidation is another important technique for assessing model generalization.\n\nBias-variance tradeoff\n\nThe bias-variance tradeoff is a central problem in supervised learning. Ideally, one wants to choose a model that both accurately captures the regularities in its training data, but also generalizes well to unseen data. Unfortunately, it is typically impossible to do both simultaneously.\n\nApplications",
+    "l to unseen data. Unfortunately, it is typically impossible to do both simultaneously.\n\nApplications\n\nMachine learning has numerous applications across various industries:\n- Healthcare: Disease diagnosis, drug discovery, personalized medicine\n- Finance: Fraud detection, algorithmic trading, credit scoring\n- Transportation: Self-driving cars, route optimization, traffic prediction\n- Natural language processing: Machine translation, sentiment analysis, chatbots\n- Computer vision: Image classificat",
+    "e processing: Machine translation, sentiment analysis, chatbots\n- Computer vision: Image classification, object detection, facial recognition\n- Recommendation systems: Netflix, Amazon, Spotify recommendations",
+    "Source: Wikipedia - Artificial Neural Network\nURL: https://en.wikipedia.org/wiki/Neural_network_(machine_learning)\n\nArtificial Neural Networks\n\nAn artificial neural network (ANN) is a computational model inspired by the structure and functioning of biological neural networks in the brain. ANNs are a subset of machine learning and form the backbone of deep learning algorithms.",
+    "the brain. ANNs are a subset of machine learning and form the backbone of deep learning algorithms.\n\nThe first practical ANN was the perceptron, invented by Frank Rosenblatt in 1958. The modern deep learning renaissance began after 2012 when AlexNet demonstrated dramatic improvements in image recognition.\n\nStructure of Neural Networks\n\nNeurons and Layers",
+    "trated dramatic improvements in image recognition.\n\nStructure of Neural Networks\n\nNeurons and Layers\n\nA neural network is composed of layers of interconnected nodes or \"neurons.\" Each connection can transmit a signal to other neurons. An artificial neuron receives signals, processes them, and can signal neurons connected to it.",
+    "rons. An artificial neuron receives signals, processes them, and can signal neurons connected to it.\n\nThe typical structure includes:\n- Input layer: Receives raw feature data\n- Hidden layers: One or more intermediate layers that learn representations\n- Output layer: Produces the final prediction or output\n\nEach neuron in a layer is typically connected to every neuron in the following layer (fully connected or dense layer).\n\nWeights and Biases",
+    "nnected to every neuron in the following layer (fully connected or dense layer).\n\nWeights and Biases\n\nEach connection between neurons has an associated weight, which determines the strength of the connection. Each neuron also has a bias term. Learning in neural networks involves adjusting these weights and biases to minimize a loss function.\n\nThe output of a neuron is calculated as:\noutput = activation_function(sum(weights * inputs) + bias)\n\nActivation Functions",
+    "n is calculated as:\noutput = activation_function(sum(weights * inputs) + bias)\n\nActivation Functions\n\nActivation functions introduce non-linearity into the network, allowing it to learn complex patterns:\n\n1. Sigmoid: \u03c3(x) = 1/(1+e^(-x))\n   - Output range: (0, 1)\n   - Used for binary classification output\n   - Suffers from vanishing gradient for deep networks",
+    "1)\n   - Used for binary classification output\n   - Suffers from vanishing gradient for deep networks\n\n2. Hyperbolic Tangent (tanh): tanh(x) = (e^x - e^(-x))/(e^x + e^(-x))\n   - Output range: (-1, 1)\n   - Zero-centered, better than sigmoid for hidden layers\n\n3. Rectified Linear Unit (ReLU): f(x) = max(0, x)\n   - Most popular activation for hidden layers\n   - Computationally efficient\n   - Can suffer from \"dying ReLU\" problem\n\n4. Leaky ReLU: f(x) = max(0.01x, x)\n   - Addresses dying ReLU problem",
+    "fer from \"dying ReLU\" problem\n\n4. Leaky ReLU: f(x) = max(0.01x, x)\n   - Addresses dying ReLU problem\n\n5. Softmax: Converts logits to probability distribution\n   - Used for multi-class classification output layer\n\nTraining Neural Networks\n\nForward Propagation",
+    "- Used for multi-class classification output layer\n\nTraining Neural Networks\n\nForward Propagation\n\nDuring forward propagation, input data flows through the network layer by layer. At each layer, the weighted sum of inputs is computed and passed through an activation function. The final output is compared to the target using a loss function.\n\nLoss Functions",
+    "tivation function. The final output is compared to the target using a loss function.\n\nLoss Functions\n\nLoss functions measure how well the network's predictions match the true labels:\n- Mean Squared Error (MSE): Used for regression tasks\n- Binary Cross-Entropy: Used for binary classification\n- Categorical Cross-Entropy: Used for multi-class classification\n- Huber Loss: Robust to outliers\n\nBackpropagation",
+    "Cross-Entropy: Used for multi-class classification\n- Huber Loss: Robust to outliers\n\nBackpropagation\n\nBackpropagation is the key algorithm for training neural networks. It works by computing the gradient of the loss with respect to each weight using the chain rule of calculus, then updating weights in the direction that reduces loss.",
+    "h weight using the chain rule of calculus, then updating weights in the direction that reduces loss.\n\nThe algorithm:\n1. Perform forward pass to compute output and loss\n2. Compute gradient of loss at output\n3. Propagate gradients backward through the network\n4. Update weights using gradient descent\n\nGradient Descent Variants",
+    "nts backward through the network\n4. Update weights using gradient descent\n\nGradient Descent Variants\n\n- Batch Gradient Descent: Computes gradient on entire dataset\n- Stochastic Gradient Descent (SGD): Updates after each sample\n- Mini-batch Gradient Descent: Updates using small batches\n- Adam Optimizer: Adaptive learning rates with momentum\n- AdaGrad: Adapts learning rate per parameter\n- RMSprop: Maintains moving average of squared gradients\n\nHyperparameters",
+    "earning rate per parameter\n- RMSprop: Maintains moving average of squared gradients\n\nHyperparameters\n\nKey hyperparameters in neural network training:\n- Learning rate: Controls step size during optimization\n- Batch size: Number of training examples per update\n- Number of epochs: How many times the full dataset is passed\n- Network architecture: Number and size of layers\n- Regularization parameters: Dropout rate, weight decay\n\nRegularization Techniques\n\nDropout",
+    "f layers\n- Regularization parameters: Dropout rate, weight decay\n\nRegularization Techniques\n\nDropout\n\nDropout is a regularization technique where randomly selected neurons are ignored during training. This prevents complex co-adaptations and forces the network to learn more robust features. Typical dropout rates are 0.2 to 0.5.\n\nBatch Normalization",
+    "he network to learn more robust features. Typical dropout rates are 0.2 to 0.5.\n\nBatch Normalization\n\nBatch normalization normalizes the inputs to each layer, reducing internal covariate shift. It allows higher learning rates, reduces sensitivity to initialization, and acts as a form of regularization.\n\nEarly Stopping\n\nEarly stopping monitors performance on a validation set during training and stops when validation performance begins to degrade, preventing overfitting.",
+    "set during training and stops when validation performance begins to degrade, preventing overfitting.\n\nTypes of Neural Networks\n\nFeedforward Networks (Multi-Layer Perceptrons)\n\nThe simplest type of neural network where information moves only in one direction\u2014forward\u2014from input nodes, through hidden nodes to output nodes. There are no cycles or loops.\n\nConvolutional Neural Networks (CNNs)",
+    "gh hidden nodes to output nodes. There are no cycles or loops.\n\nConvolutional Neural Networks (CNNs)\n\nSpecialized for processing grid-like data (images). Use convolutional layers with shared weights to detect local features. Key operations: convolution, pooling, and fully connected classification.\n\nRecurrent Neural Networks (RNNs)",
+    "rations: convolution, pooling, and fully connected classification.\n\nRecurrent Neural Networks (RNNs)\n\nDesigned for sequential data. Connections form directed cycles, allowing information to persist. Variants include LSTM (Long Short-Term Memory) and GRU (Gated Recurrent Unit).\n\nTransformer Networks\n\nUse self-attention mechanisms rather than recurrence. Highly parallelizable and effective for NLP tasks. The dominant architecture in modern large language models.\n\nGraph Neural Networks (GNNs)",
+    "NLP tasks. The dominant architecture in modern large language models.\n\nGraph Neural Networks (GNNs)\n\nOperate on graph-structured data. Used for social network analysis, molecular property prediction, and knowledge graphs.\n\nUniversal Approximation Theorem",
+    "work analysis, molecular property prediction, and knowledge graphs.\n\nUniversal Approximation Theorem\n\nThe universal approximation theorem states that a feedforward network with a single hidden layer containing a finite number of neurons can approximate continuous functions on compact subsets of R^n, under mild assumptions on the activation function.",
+    "e continuous functions on compact subsets of R^n, under mild assumptions on the activation function.\n\nThis theorem provides theoretical justification for why neural networks are powerful function approximators. However, it does not say anything about the learnability of these functions.\n\nApplications",
+    "ximators. However, it does not say anything about the learnability of these functions.\n\nApplications\n\nNeural networks are used in a wide variety of applications:\n- Image and video recognition\n- Natural language processing and translation\n- Speech recognition and synthesis\n- Medical diagnosis and drug discovery\n- Financial forecasting and fraud detection\n- Recommendation systems\n- Robotics and autonomous vehicles\n- Game playing (Chess, Go, video games)\n- Scientific simulations (weather forecastin",
+    "nomous vehicles\n- Game playing (Chess, Go, video games)\n- Scientific simulations (weather forecasting, particle physics)",
+    "Source: Wikipedia - Natural Language Processing\nURL: https://en.wikipedia.org/wiki/Natural_language_processing\n\nNatural Language Processing\n\nNatural language processing (NLP) is an interdisciplinary subfield of computer science and artificial intelligence.",
+    "e processing (NLP) is an interdisciplinary subfield of computer science and artificial intelligence. It is primarily concerned with providing computers with the ability to process data encoded in natural language and is thus closely related to information retrieval, knowledge representation and computational linguistics, a subfield of linguistics.",
+    "mation retrieval, knowledge representation and computational linguistics, a subfield of linguistics.\n\nTypically, data is collected in text corpora, using either rule-based, statistical, or neural-based approaches to build systems that perform tasks such as speech tagging, parsing, named entity recognition, sentiment analysis, language translation, and question answering.\n\nHistory",
+    "named entity recognition, sentiment analysis, language translation, and question answering.\n\nHistory\n\nThe history of natural language processing generally started in the 1950s, although work can be found from earlier periods. In 1950, Alan Turing published an article titled \"Computing Machinery and Intelligence\" which proposed what is now called the Turing test as a criterion of intelligence, a task that involves the automated interpretation and generation of natural language.",
+    "intelligence, a task that involves the automated interpretation and generation of natural language.\n\nThe Georgetown\u2013IBM experiment in 1954 involved fully automatic translation of more than sixty Russian sentences into English. The authors claimed that within three to five years, machine translation would be a solved problem.",
+    "The authors claimed that within three to five years, machine translation would be a solved problem. However, real progress was much slower, and after the ALPAC report in 1966, which found that ten-year-long research had failed to fulfill the expectations, funding for machine translation was dramatically reduced.",
+    "ch had failed to fulfill the expectations, funding for machine translation was dramatically reduced.\n\nThe 1980s and 1990s saw a revolution in NLP with the introduction of machine learning algorithms for language processing. This was due in part to the steady increase in computational power and the gradual lessening of the dominance of Chomskyan theories of linguistics, in which the statistical approach to NLP was marginalised.",
+    "nce of Chomskyan theories of linguistics, in which the statistical approach to NLP was marginalised.\n\nIn the 2010s, representation learning and deep neural networks became common in NLP research. Neural machine translation emerged as a major improvement over statistical approaches. Word embeddings (word2vec) were introduced in 2013 by Mikolov et al. at Google.\n\nKey NLP Tasks\n\nText Classification",
+    "(word2vec) were introduced in 2013 by Mikolov et al. at Google.\n\nKey NLP Tasks\n\nText Classification\n\nText classification is the task of assigning predefined categories to text. Applications include:\n- Spam detection\n- Sentiment analysis (positive/negative/neutral)\n- Topic categorization\n- Language identification\n- Intent detection in chatbots\n\nNamed Entity Recognition (NER)",
+    "egorization\n- Language identification\n- Intent detection in chatbots\n\nNamed Entity Recognition (NER)\n\nNamed entity recognition (NER) seeks to locate and classify named entities mentioned in unstructured text into pre-defined categories such as person names, organizations, locations, medical codes, time expressions, quantities, monetary values, percentages, etc.\n\nMachine Translation",
+    "medical codes, time expressions, quantities, monetary values, percentages, etc.\n\nMachine Translation\n\nMachine translation is the task of automatically translating text from one language to another. Early approaches used rule-based systems. Statistical machine translation became dominant in the 2000s. Neural machine translation using encoder-decoder architectures became state-of-the-art in the 2010s.\n\nQuestion Answering",
+    "lation using encoder-decoder architectures became state-of-the-art in the 2010s.\n\nQuestion Answering\n\nQuestion answering (QA) is a computer science discipline within the fields of information retrieval and NLP that is concerned with building systems that automatically answer questions posed by humans in a natural language.",
+    "ned with building systems that automatically answer questions posed by humans in a natural language.\n\nTypes of QA systems include:\n- Closed-domain: Specialized in a specific domain (e.g., medical or legal)\n- Open-domain: Can answer questions about any topic\n- Reading comprehension: Answers based on a given passage\n- Knowledge-base QA: Uses structured knowledge bases\n\nSentiment Analysis",
+    "rs based on a given passage\n- Knowledge-base QA: Uses structured knowledge bases\n\nSentiment Analysis\n\nSentiment analysis or opinion mining is the use of NLP to identify and extract subjective information from text, especially opinions, attitudes, and emotions. Applications include brand monitoring, product review analysis, political opinion tracking, and customer feedback analysis.\n\nText Summarization",
+    "uct review analysis, political opinion tracking, and customer feedback analysis.\n\nText Summarization\n\nText summarization is the task of producing a concise and fluent summary while preserving key information and overall meaning. Approaches include:\n- Extractive summarization: Selects key sentences from the source text\n- Abstractive summarization: Generates new text that captures the meaning\n\nLanguage Models and Embeddings\n\nWord Embeddings",
+    "ation: Generates new text that captures the meaning\n\nLanguage Models and Embeddings\n\nWord Embeddings\n\nWord embeddings are dense vector representations of words where semantically similar words map to nearby points in vector space. Key methods include:\n- Word2Vec (2013): Predicts surrounding words (Skip-gram) or predicts target word from context (CBOW)\n- GloVe (2014): Uses global co-occurrence statistics\n- FastText: Handles subword information, useful for morphologically rich languages",
+    "rrence statistics\n- FastText: Handles subword information, useful for morphologically rich languages\n\nContextualized Embeddings\n\nUnlike static word embeddings, contextualized embeddings change based on surrounding context:\n- ELMo (2018): Uses bidirectional LSTM to generate context-sensitive representations\n- BERT (2018): Bidirectional Encoder Representations from Transformers, trained with masked language modeling\n- GPT (2018): Generative Pre-trained Transformer, trained with language modeling",
+    "d language modeling\n- GPT (2018): Generative Pre-trained Transformer, trained with language modeling\n\nLarge Language Models\n\nLarge language models (LLMs) are language models consisting of a neural network with many parameters (typically billions of weights), trained on large quantities of unlabeled text. LLMs emerged around 2018 and perform well at a wide variety of tasks.",
+    "quantities of unlabeled text. LLMs emerged around 2018 and perform well at a wide variety of tasks.\n\nNotable LLMs include:\n- GPT-3 and GPT-4 (OpenAI): Used for various generation tasks\n- BERT and its variants (Google): Used for understanding tasks\n- T5 (Google): Text-to-text transfer transformer\n- LLaMA (Meta): Open-source large language model\n- Claude (Anthropic): Constitutional AI-based assistant\n\nRetrieval-Augmented Generation (RAG)",
+    "model\n- Claude (Anthropic): Constitutional AI-based assistant\n\nRetrieval-Augmented Generation (RAG)\n\nRetrieval-Augmented Generation (RAG) is a technique that combines information retrieval with text generation. Instead of relying solely on the parametric knowledge stored in model weights, RAG systems:\n1. Retrieve relevant documents from a knowledge base using the user's query\n2. Pass the retrieved documents as context to an LLM\n3. Generate an answer grounded in the retrieved information",
+    "retrieved documents as context to an LLM\n3. Generate an answer grounded in the retrieved information\n\nRAG was introduced by Lewis et al. at Facebook AI Research in 2020. It addresses the problem of hallucination in LLMs by grounding responses in real documents. RAG systems are particularly useful for domain-specific question answering, where the LLM may not have sufficient training data.",
+    "useful for domain-specific question answering, where the LLM may not have sufficient training data.\n\nKey components of a RAG system:\n- Document store/vector database (FAISS, Chroma, Pinecone)\n- Embedding model to encode documents and queries\n- Retriever to find relevant documents\n- Generator LLM to produce final answers\n\nNLP Evaluation Metrics\n\nBLEU Score",
+    "find relevant documents\n- Generator LLM to produce final answers\n\nNLP Evaluation Metrics\n\nBLEU Score\n\nBLEU (Bilingual Evaluation Understudy) is an algorithm for evaluating the quality of text which has been machine-translated from one natural language to another. It measures n-gram overlap between generated and reference texts.\n\nROUGE Score",
+    "language to another. It measures n-gram overlap between generated and reference texts.\n\nROUGE Score\n\nROUGE (Recall-Oriented Understudy for Gisting Evaluation) is a set of metrics used for evaluating automatic summarization and machine translation. ROUGE-N measures n-gram recall, ROUGE-L measures longest common subsequence.\n\nPerplexity",
+    "ranslation. ROUGE-N measures n-gram recall, ROUGE-L measures longest common subsequence.\n\nPerplexity\n\nPerplexity is a measurement of how well a probability distribution or probability model predicts a sample. A lower perplexity score indicates better performance.\n\nF1 Score\n\nF1 score is commonly used for tasks like named entity recognition and question answering. It is the harmonic mean of precision and recall."
+  ],
+  "metadata": [
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 0,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 1,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 2,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 3,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 4,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 5,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 6,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 7,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 8,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 9,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 10,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 11,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 12,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 13,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 14,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 15,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 16,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 17,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 18,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 19,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 20,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 21,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 22,
+      "total_chunks": 24
+    },
+    {
+      "source": "deep_learning.txt",
+      "topic": "Deep Learning",
+      "chunk_index": 23,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 0,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 1,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 2,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 3,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 4,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 5,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 6,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 7,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 8,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 9,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 10,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 11,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 12,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 13,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 14,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 15,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 16,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 17,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 18,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 19,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 20,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 21,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 22,
+      "total_chunks": 24
+    },
+    {
+      "source": "llm.txt",
+      "topic": "Llm",
+      "chunk_index": 23,
+      "total_chunks": 24
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 0,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 1,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 2,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 3,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 4,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 5,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 6,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 7,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 8,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 9,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 10,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 11,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 12,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 13,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 14,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 15,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 16,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 17,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 18,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 19,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 20,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 21,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 22,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 23,
+      "total_chunks": 25
+    },
+    {
+      "source": "machine_learning.txt",
+      "topic": "Machine Learning",
+      "chunk_index": 24,
+      "total_chunks": 25
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 0,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 1,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 2,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 3,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 4,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 5,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 6,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 7,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 8,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 9,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 10,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 11,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 12,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 13,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 14,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 15,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 16,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 17,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 18,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 19,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 20,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 21,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 22,
+      "total_chunks": 24
+    },
+    {
+      "source": "neural_networks.txt",
+      "topic": "Neural Networks",
+      "chunk_index": 23,
+      "total_chunks": 24
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 0,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 1,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 2,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 3,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 4,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 5,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 6,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 7,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 8,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 9,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 10,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 11,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 12,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 13,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 14,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 15,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 16,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 17,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 18,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 19,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 20,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 21,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 22,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 23,
+      "total_chunks": 25
+    },
+    {
+      "source": "nlp.txt",
+      "topic": "Nlp",
+      "chunk_index": 24,
+      "total_chunks": 25
+    }
+  ]
+}
